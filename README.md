@@ -21,8 +21,8 @@ Une application Flutter de démonstration qui utilise Retrofit pour effectuer de
 
 1. Cloner le dépôt :
    ```bash
-   git clone [URL_DU_DEPOT]
-   cd retrofit_test
+   git clone https://github.com/nikiemaismael/retrofit_formation.git
+   
    ```
 
 2. Installer les dépendances :
