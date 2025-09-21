@@ -19,31 +19,40 @@ class _PostViewState extends State<PostView> {
 
   void showForm(){
     showModalBottomSheet(
+      isScrollControlled: true,
+      isDismissible: true,
       context: context,
       builder: (BuildContext context) {
-        return SizedBox(
-          height: 300,
-          width: double.infinity,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            spacing:8,
-            children: [
-              Text("Formulaire de post"),
-              TextField(controller: _titleController),
-              TextField(controller: _bodyController),
-              SizedBox(height: 16,),
-              ElevatedButton(onPressed: () {
-                final post = PostModel(
-                  title: _titleController.text,
-                  body: _bodyController.text, userId: 1, id: 1,
-                );
-               postViewModel.selectedPost != null ? postViewModel.updatePost(postViewModel.selectedPost!.id, post) : postViewModel.createPost(post);
-                _titleController.clear();
-                _bodyController.clear();
-                Navigator.pop(context);
-              }, child: Text("Ajouter"))
-            ],
+        return Padding(
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(context).viewInsets.bottom,
           ),
+            child: SizedBox(
+          //height: 400,
+          width: double.infinity,
+          child: SingleChildScrollView(
+            child: Padding(padding: EdgeInsets.all(16),child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing:8,
+              children: [
+                Text("Formulaire de post"),
+                TextField(controller: _titleController),
+                TextField(controller: _bodyController),
+                SizedBox(height: 16,),
+                ElevatedButton(onPressed: () {
+                  final post = PostModel(
+                    title: _titleController.text,
+                    body: _bodyController.text, userId: 1, id: 1,
+                  );
+                  postViewModel.selectedPost != null ? postViewModel.updatePost(postViewModel.selectedPost!.id, post) : postViewModel.createPost(post);
+                  _titleController.clear();
+                  _bodyController.clear();
+                  Navigator.pop(context);
+                }, child: Text("Ajouter"))
+              ],
+            ),),
+          ),
+        ),
         );
       },
     );
@@ -81,8 +90,8 @@ class _PostViewState extends State<PostView> {
                           showForm();
                         },
                         leading: Text(post.id.toString()),
-                        title: Text(post.title),
-                        subtitle: Text(post.body),
+                        title: Text(post.title,overflow: TextOverflow.ellipsis,),
+                        subtitle: Text(post.body,overflow: TextOverflow.ellipsis,),
                         trailing: IconButton(onPressed: () {
                           showDialog(context: context, builder: (context) {
                             return AlertDialog(
