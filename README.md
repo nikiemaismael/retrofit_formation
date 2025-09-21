@@ -17,7 +17,7 @@ Une application Flutter de démonstration qui utilise Retrofit pour effectuer de
 - Dart SDK (compatible avec la version de Flutter)
 - Un éditeur de code (VS Code ou Android Studio avec les extensions Dart/Flutter)
 
-## 🛠️ Installation
+## Installation
 
 1. Cloner le dépôt :
    ```bash
@@ -72,14 +72,14 @@ L'application se connecte à l'API JSONPlaceholder pour effectuer des opération
 - `json_annotation`: Annotations pour la sérialisation JSON
 - `build_runner`: Outil de génération de code
 
-## 🔧 Configuration requise
+## Configuration requise
 
 - Android: minSdkVersion 21
 - iOS: 11.0 ou supérieur
 
 ##  Auteur
 
-[Nikiema Ismael]
+ Nikiema Ismael
 
 ##  Licence
 
