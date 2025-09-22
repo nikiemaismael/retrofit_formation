@@ -14,6 +14,7 @@ class PostViewModel extends ChangeNotifier {
     try {
       final posts = await restClient.getPosts();
       this.posts = posts;
+      logger.d(posts);
     } catch (e) {
       logger.e(e);
     }finally {
