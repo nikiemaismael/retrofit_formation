@@ -13,7 +13,7 @@ Dio getDio() {
     receiveDataWhenStatusError: true,
     connectTimeout: const Duration(seconds: 30),
     receiveTimeout: const Duration(seconds: 30),
-    baseUrl: "https://jsonplaceholder.typicode.com/",
+    baseUrl: "https://jsonplaceholder1.typicode.com/",
     contentType: Headers.jsonContentType,
   );
 

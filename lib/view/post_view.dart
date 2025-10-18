@@ -60,7 +60,7 @@ class _PostViewState extends State<PostView> {
   @override
   void initState() {
     super.initState();
-    postViewModel =Provider.of<PostViewModel>(context, listen: false);
+    postViewModel = Provider.of<PostViewModel>(context, listen: false);
     postViewModel.getPosts();
   }
   @override
@@ -71,6 +71,7 @@ class _PostViewState extends State<PostView> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text("Liste des posts"),
         ),
+
         body: Center(
           child: postViewModel.isLoadingPosts ? CircularProgressIndicator() : Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -119,6 +120,7 @@ class _PostViewState extends State<PostView> {
             ],
           ),
         ),
+
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             showForm();

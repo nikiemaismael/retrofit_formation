@@ -3,12 +3,14 @@ import 'package:flutter/foundation.dart';
 import 'package:logger/logger.dart';
 
 import '../models/post_model.dart';
+import '../services/api_client_service.dart';
 import '../services/rest_client.dart';
 class PostViewModel extends ChangeNotifier {
   bool isLoadingPosts = true;
   List<PostModel> posts = [];
   PostModel? selectedPost ;
   final logger = Logger();
+
 
   void getPosts() async {
     try {

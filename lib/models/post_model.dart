@@ -7,6 +7,7 @@ class PostModel {
    int id;
    int userId;
    String title;
+   //@JsonKey(name: "body")
    String body;
 
   PostModel({required this.userId,required this.id, required this.title, required this.body});

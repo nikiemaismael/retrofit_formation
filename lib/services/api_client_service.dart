@@ -4,10 +4,9 @@ import 'package:retrofit/http.dart';
 import 'package:retrofit_test/models/post_model.dart';
 part 'api_client_service.g.dart';
 
-@RestApi()
+@RestApi(baseUrl: "https://jsonplaceholder1.typicode.com")
 abstract class ApiClientService {
   factory ApiClientService(Dio dio,{String? baseUrl}) => _ApiClientService(dio,baseUrl: baseUrl);
-
 
   @GET("/posts")
   Future<List<PostModel>> getPosts();
