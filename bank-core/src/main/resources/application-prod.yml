@@ -1,0 +1,18 @@
+server:
+  error:
+    include-message: never
+    include-stacktrace: never
+    include-exception: false
+    include-binding-errors: never
+
+app:
+  errors:
+    expose-technical-details: false
+
+logging:
+  level:
+    root: INFO
+    com.bank: INFO
+    com.bank.errors: INFO
+    org.hibernate.SQL: WARN
+    org.springframework.web: WARN

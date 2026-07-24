@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: bank-core
+  profiles:
+    active: prod
+  mvc:
+    problemdetails:
+      enabled: false
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: false
+
+server:
+  error:
+    include-message: never
+    include-binding-errors: never
+    include-stacktrace: never
+    include-exception: false
+    whitelabel:
+      enabled: false
+
+app:
+  errors:
+    expose-technical-details: false
+    error-page: /error.xhtml

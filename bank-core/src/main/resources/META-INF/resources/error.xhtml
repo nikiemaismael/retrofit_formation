@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+<h:head>
+    <title>Erreur</title>
+</h:head>
+<h:body>
+    <div class="error-panel">
+        <h1>Une erreur est survenue</h1>
+        <p>Nos equipes ont ete notifiees. Merci de communiquer la reference
+            suivante au support :</p>
+        <p class="error-id">
+            <strong>#{sessionScope.lastErrorId}</strong>
+        </p>
+    </div>
+</h:body>
+</html>

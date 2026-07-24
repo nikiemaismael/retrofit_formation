@@ -1,0 +1,14 @@
+server:
+  error:
+    include-message: always
+    include-stacktrace: on_param
+    include-binding-errors: always
+
+app:
+  errors:
+    expose-technical-details: true
+
+logging:
+  level:
+    com.bank: DEBUG
+    org.hibernate.SQL: DEBUG
